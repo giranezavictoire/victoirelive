@@ -1,0 +1,424 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* Layout */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #0e6655;
+  border-right: 1px solid #eee;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+.main-content {
+  margin-left: 220px;
+  padding: 60px 40px;
+  height: 100vh;
+  overflow-y: auto;
+   max-width: 900px;     
+  width: 90vw;         
+  box-sizing: border-box;
+  margin-left: 220px;
+}
+/* Sidebar content */
+.profile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.profile h2 {
+  margin-top: 12px;
+  font-size: 1.9rem;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  margin: 20px 0;
+}
+nav a {
+  text-decoration: none;
+  color: #292828;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+nav li.active a,
+nav a:hover {
+  color: #85b69f;
+}
+
+/* Section styling */
+.section {
+  padding-bottom: 120px;
+}
+.section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Lora', serif;
+  margin-bottom: 20px;
+}
+.section h1 span {
+  color: #0e6655;
+}
+.section h2 {
+  font-size: 2.9rem;
+  font-family: 'Lora', serif;
+  margin-bottom: 16px;
+  border-left: 4px solid #0e6655;
+  padding-left: 12px;
+}
+.section h3 {
+  font-size: 1.5rem;
+  font-family: 'Lora', serif;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+.section p,
+.list {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.list li {
+  margin-bottom: 8px;
+}
+.contact {
+  margin: 24px 0;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #0e6655;
+}
+.contact a {
+  color: #5271c7;
+}
+.btn {
+  background: #0e6655;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #85b69f;
+}
+.cursor {
+  display: inline-block;
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: #0e6655;
+  animation: blink 0.7s steps(1) infinite;
+}
+.typed-text {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #444;
+}
+.intro {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 3rem 0;
+  font-weight: 300;
+  color: #2c2c2c;
+  font-family: 'Fira Code',
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.skills-list li {
+  position: relative;
+  font-size: 2.5rem;
+  color: #888;
+  transition: transform 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.skills-list li:hover {
+  transform: scale(1.2);
+  color: #74b195;
+}
+.skills-list li::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.skills-list li:hover::after {
+  opacity: 1;
+}
+.skills-list li.mysql-icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.skills-list li.mysql-icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.skill-group {
+  margin-bottom: 2rem;
+}
+.skill-group p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-family: 'Fira Code',
+}
+
+/* Awards */
+.awards-list li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+.awards-list li i {
+  color: #f5b301;
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+}
+
+/* Education/Experience */
+.education-header,
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  font-family: 'Fira Code',
+}
+.education-header h3,
+.experience-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: 'Fira Code',
+}
+.education-header span,
+.experience-header span {
+  font-size: 0.95rem;
+  color: #0e6655;
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.social-icons a {
+  font-size: 2rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover,
+.social-icons a[href*="github"]:hover {
+  color: #74b195;
+}
+.container {
+  max-width: 1000px; 
+  margin: 0 auto;     
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 60px 0;
+  color: #555;
+}
+
+/* Scrollbar */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+.main-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0; /* Start from the left edge */
+  right: 0; /* End at the right edge */
+  width: 100vw; /* Full viewport width */
+  background-color: #0e6655;
+  transition: max-height 0.3s ease;
+  border-radius: 0; /* Remove rounding if you want edge-to-edge */
+  padding: 1rem 0;
+  overflow: hidden;
+  max-height: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav li {
+  margin: 10px 0;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0e6655;
+  z-index: 999;
+  padding: 80px 1rem 1rem; /* pushes links down below the hamburger height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.mobile-header {
+  display: block; /* Only the container is block */
+  background-color: #0e6655;
+  color: white;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  z-index: 999;
+}
+.header-content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Responsive - Mobile Styles */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 80px 30px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+     max-height: 500px;
+  }
+}
+.main-content {
+  margin-left: 220px;
+  padding: 60px 40px;
+  height: 100vh;
+  overflow-y: auto;
+
+  width: calc(100% - 220px);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 15px;
+  }
+}
+.mobile-header {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: #0e6655;
+  z-index: 999;
+  padding: 0 1rem;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+/* Make sure the hero section has margin-top */
+@media screen and (max-width: 768px) {
+  .mobile-header {
+    display: block; /* Just make sure it doesn't get hidden */
+  }
+
+  #hero {
+    margin-top: 80px; /* Keeps content below the header */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
